@@ -60,3 +60,9 @@ def test_adding_one(input_data: np.ndarray, ops: list[OP]):
 
     assert np.all(np.isclose(result - input_data, 1)), f"{result}"
 ```
+
+## Genetic
+
+Use [pygad](pygad.readthedocs.io/en/latest/pygad.html#steps-to-use-pygad) to evolve network parameters.
+
+See the `.toe` file for an example.
