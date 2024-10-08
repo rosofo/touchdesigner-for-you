@@ -27,18 +27,7 @@ def onValuesChanged(changes):
 def onPulse(par):
     if par.name == "Create":
         comp = par.owner
-        venv_path = comp.par.Venv.eval()
-        python_binary = comp.par.Globalpython.eval()
-        try:
-            ## open a terminal and run the command
-            subprocess.run(
-                f"{python_binary} -m venv {venv_path}",
-                shell=True,
-                executable="/bin/bash",
-                check=True,
-            )
-        except subprocess.CalledProcessError as e:
-            print(e)
+        comp.Create()
     return
 
 
